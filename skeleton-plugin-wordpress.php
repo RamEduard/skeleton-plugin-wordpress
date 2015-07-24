@@ -20,4 +20,7 @@ load_plugin_textdomain('skeleton-plugin-wordpress', false, dirname(plugin_basena
 // Loader
 $loader = require __DIR__ . '/autoloader/autoloader.php';
 // Load namespaces
-$loader->add('src', __DIR__ . '/src');
+$loader->add('', __DIR__ . '/src');
+
+// Load Boostrap Grid Shortcode 
+add_shortcode('bootstrap_grid', 'Shortcode\\BootstrapGrid::doShortcodeContent');
